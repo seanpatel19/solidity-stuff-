@@ -1,5 +1,13 @@
-pragma solidity <=0.6.0 >0.9.9;
+pragma solidity ^0.8.17;
 
-contract add wallet{
+contract SimpleStorage {
+    uint storedData;
+    function set(uint x) public{
+        storedData=x;
+    }
+
+    function get() public view returns (uint) {
+        return storedData;
+    }
     
 }
